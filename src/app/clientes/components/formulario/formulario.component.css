@@ -1,0 +1,30 @@
+.divBtn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button{
+    width: 20%;
+}
+
+/* centrar el header */
+.card-header{
+   margin: 0 auto
+}
+
+.main-form{
+    display:block;
+    
+}
+
+.row label{
+    margin-left: 70px;
+}
+
+@media (min-width: 1200px) {
+    .row label{
+        margin-left: 200px;
+    }
+}
+

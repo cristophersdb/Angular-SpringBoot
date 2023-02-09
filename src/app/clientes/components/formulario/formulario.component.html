@@ -1,0 +1,50 @@
+<div class="card bg-dark text-white">
+    <div class="card-header">
+        <h3 class="titleForm">{{ title }}</h3>
+    </div>
+    <div class="card-body">
+        <div class="main-form">
+            <form autocomplete="off" [formGroup]="reactiveForm">
+                <!-- nombre-->
+                <div class="mb-3 row">
+                    <label class="col-form-label col-sm-2 col-xl-1">Nombre</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
+                        <span class="form-text text-danger" *ngIf="notValid('nombre')">Debe tener almenos 4 caracteres</span>
+                    </div>
+                </div>
+                <!-- apellido -->
+                <div class="mb-3 row">
+                    <label for="" class="col-form-label col-sm-2 col-xl-1">Apellido</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" formControlName="apellido" placeholder="Apellido">
+                        <span class="form-text text-danger" *ngIf="notValid('apellido')">Debe ingresar el Apellido</span>
+                    </div>
+                </div>
+                <!-- email -->
+
+                <div class="mb-3 row">
+                    <label for="" class="col-form-label col-sm-2 col-xl-1">Email</label>
+                    <div class="col-sm-6">
+                        <input type="email" class="form-control" formControlName="email" placeholder="Email">
+                        <span class="form-text text-danger" *ngIf="notValid('email')">Debe ingresar el Email</span>
+                    </div>
+                </div>
+                <!-- fecha registro -->
+                <div class="mb-3 row">
+                    <label class="col-form-label col-sm-2 col-xl-1">Fecha</label>
+                    <div class="col-sm-6">
+                        <input type="date" class="form-control" formControlName="createAt">
+                    </div>
+                </div>
+
+                <div class="mb-3 col-12">
+                    <div class="col-sm-10 divBtn">
+                        <button type="submit" (click)="create()" class="btn btn-primary" *ngIf="!editCliente" [disabled]="reactiveForm.invalid">Crear</button>
+                        <button type="submit" (click)="update()" class="btn btn-primary" *ngIf="editCliente" [disabled]="reactiveForm.invalid">Actualizar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

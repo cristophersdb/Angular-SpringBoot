@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-header text-center">
+        Listado de Cursos
+    </div>
+    <div class="card-body">
+        <ul class="list-group" *ngIf="verCurso">
+            <li class="list-group-item"  *ngFor="let curso of listadoCurso">{{curso}}</li>
+        </ul>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-primary" (click)="ocultar()">{{ verCurso? 'OCULTAR' : 'MOSTRAR'}}</button>
+    </div>
+</div>
