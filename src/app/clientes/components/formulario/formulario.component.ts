@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 export class FormularioComponent implements OnInit {
   title: string = 'Crear Cliente';
   editCliente: boolean = false;
+  startDate = new Date(1990, 0, 1);
 
   reactiveForm: FormGroup = this.formBuilder.group({
     id: [''],

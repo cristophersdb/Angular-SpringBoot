@@ -28,3 +28,8 @@ button{
     }
 }
 
+.datepicker{
+    display: inline;
+    width: 300px;
+}
+

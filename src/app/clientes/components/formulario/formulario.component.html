@@ -35,9 +35,9 @@
                     <label class="col-form-label col-sm-2 col-xl-1">Fecha</label>
                     <div class="col-sm-6">
                         <input type="date" class="form-control" formControlName="createAt">
-                    </div>
-                </div>
 
+                    </div>  
+                </div>
                 <div class="mb-3 col-12">
                     <div class="col-sm-10 divBtn">
                         <button type="submit" (click)="create()" class="btn btn-primary" *ngIf="!editCliente" [disabled]="reactiveForm.invalid">Crear</button>
